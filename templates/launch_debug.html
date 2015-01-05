@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+  <link rel="shortcut icon" type="image/gif" href="/static/Z_Icon.gif">
+  <title>"Debug Screen"</title>
+
+  
+</head><body>
+<font face="monospace"> </font>
+<img src="/static/Z_Icon.gif">    <span style="font-weight: bold; text-decoration: underline;">Menu de Débogue</span><span style="font-weight: bold;"> (Ne pas toucher!)</span><br><br>
+<hr>
+  <input name="Plot_1_Stats" value="Graphique des Temperatures de Dimanche" type="button" onclick="window.location.href='./debug_buttons/1'"><br>
+  <input name="Plot_2_Stats" value="Graphique des Temperatures de Lundi" type="button" onclick="window.location.href='./debug_buttons/2'"><br>
+  <input name="Plot_3_Stats" value="Graphique des Temperatures de Mardi" type="button" onclick="window.location.href='./debug_buttons/3'"><br>
+  <input name="Plot_4_Stats" value="Graphique des Temperatures de Mercredi" type="button" onclick="window.location.href='./debug_buttons/4'"><br>
+  <input name="Plot_5_Stats" value="Graphique des Temperatures de Jeudi" type="button" onclick="window.location.href='./debug_buttons/5'"><br>
+  <input name="Plot_6_Stats" value="Graphique des Temperatures de Vendredi" type="button" onclick="window.location.href='./debug_buttons/6'"><br>
+  <input name="Plot_7_Stats" value="Graphique des Temperatures de Samedi" type="button" onclick="window.location.href='./debug_buttons/7'">
+<hr> 
+  <input name="Reboot_RPi" value="Reboot RPi" type="button" onclick="window.location.href='./debug_buttons/reboot'">   
+  <input name="Shutdown_RPi" value="Shutdown RPi" type="button" onclick="window.location.href='./debug_buttons/shutdown'">
+<hr> 
+<form name="debug_buttons" action="./launch_debug.html" method="POST" >
+  <div align="left"><font face="monospace">
+  Temperature Cycle On/Off Threshold (°C): <input type="text" name="temp_offset" value={{ temp_offset }}> <br>
+  Temperature Sensor Correction (°C):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="temp_correction" value={{ temp_correction }}> <br>
+  <input name="Submit_temp_params" value="Soumettre" type="submit" >
+  </font></div>
+</form>  
+<hr> 
+<a href="./popup_main.html">Return to Main Screen</a> 
+
+</body></html>

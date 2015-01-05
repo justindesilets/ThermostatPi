@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+   <link rel="shortcut icon" type="image/gif" href="/static/Z_Icon.gif" />
+   <title>"Update Programming"</title>
+</head><body>
+      <font face="monospace">
+      <img src="/static/Z_Icon.gif"><br>
+  Attention, les espaces sont importats pour le positionnement<br>
+  dans les bonnes colonnes. Aucun overlap d'heures permis. <br>
+  Meme pas 22:00 et 22:00, par exemple.<br><br>
+  
+  PROGRAMMES DE TEMPERATURE
+  jour(1-7)  heures-debut:minutes-debut  heures-fin:minutes-fin  temperature(xx.x)<br>
+  Exemple: 1 00:00 06:29 19.0 <br><br>
+  
+  PROGRAMME DE VENTILATION
+  jour(1-7)  heures-debut:minutes-debut  heures-fin:minutes-fin<br>
+  Exemple: 1 00:00 06:29<br><br>
+
+<table style="text-align: left; width: 200px;" border="1" cellpadding="10" cellspacing="2">
+  <tbody>
+    <tr style="background-color:#d67c33;">
+      <td style="vertical-align: top;">
+      <form name="heat_prog_editor" method="POST" action="/heat_submit_button.html"><b>Programmation du Chauffage</b><br><br>
+      <textarea name="heat_textarea" style="width: 250px; height: 150px;">{{ heat_prog_data }}</textarea></td>
+      <td style="vertical-align: center;">  <input type="submit" name="heat_submit_button" value="Soumettre">
+      </form>
+      </td>
+    </tr>
+      <tr style="background-color:#3daaca;">
+      <td style="vertical-align: top;">
+      <form name="cool_prog_editor" method="POST" action="/cool_submit_button.html"><b>Programmation de la Climatisation</b><br><br>
+      <textarea name="cool_textarea" style="width: 250px; height: 150px;">{{ cool_prog_data }}</textarea>
+      </td>
+      <td style="vertical-align: center;"><input type="submit" name="cool_submit_button" value="Soumettre">
+      </form>
+      </td>
+    </tr>
+      <tr style="background-color:#6cbf4b;">
+      <td style="vertical-align: top;">
+      <form name="blower_prog_editor" method="POST" action="/blower_submit_button.html"><b>Programmation de la Ventilation</b><br><br>
+      <textarea name="blower_textarea" style="width: 250px; height: 150px;">{{ blower_prog_data }}</textarea>
+      </td>
+      <td style="vertical-align: center;"><input type="submit" name="blower_submit_button" value="Soumettre">
+      </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br> <a href="/" target="_parent"><input type="submit" style="background-color:white;" name="cancel_pressed" value="Annuler" formtarget="_parent"> </button></a>
+</body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>"button"</title>
+  
+  <meta http-equiv="refresh" content="60">
+
+</head><body>
+  <div style="text-align: left;">
+  <table style="text-align: center; width: 100%;" border="0" cellpadding="5" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top; width: 250px;">
+        <table style="text-align: left; width: 200px; height: 72px; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2" bgcolor="#e8e8e8">
+          <tbody>
+            <tr>
+<FORM name="button_input" action="./ctrl_buttons.html" method="POST">
+<div>         <td style="vertical-align: center; text-align: center;"><button type="submit" style="background-color:white;" name="off_button_pressed"> <img src="/static/off_button.png" alt="OFF" align="bottom" border="{{ off_button_border }}" height={{ off_img_size }} width={{ off_img_size }}></button></td>
+              <td style="vertical-align: center; text-align: center;"><button type="submit" style="background-color:white;" name="heat_button_pressed"> <img src="/static/heating_button.png" alt="HEAT" align="bottom" border="{{ heat_button_border }}" height={{ heat_img_size }} width={{ heat_img_size }}></button></td>
+              <td style="vertical-align: center; text-align: center;"><button type="submit" style="background-color:white;" name="cool_button_pressed"> <img src="/static/cooling_button.png" alt="COOL" align="bottom" border="{{ cool_button_border }}" height={{ cool_img_size }} width={{ cool_img_size }}></button></td>
+              <td style="vertical-align: center;text-align: center;"><button type="submit" style="background-color:white;" name="prog_button_pressed"> <img src="/static/prog_button.png" alt="PROGRAMMED" align="bottom" border="{{ prog_button_border }}" height={{ prog_img_size }} width={{ prog_img_size }}></button></td>
+              </tr>
+          </tbody>
+        </table>
+        </td>
+        <td style="vertical-align: top; width: 250px;">
+        <table style="text-align: left; width: 72px; height: 72px; margin-left: 0px; margin-right: 0px;" border="0" cellpadding="2" cellspacing="2" bgcolor="#e8e8e8">
+           <tbody>
+            <tr>
+              <td style="vertical-align: center;text-align: center;"><button type="submit" style="background-color:white;" name="blower_button_pressed"> <img src="/static/blower_button.png" alt="FAN" align="bottom" border="{{ blower_button_border }}" height={{ blower_img_size }} width={{ blower_img_size }}></button></td>
+              <td style="vertical-align: center;text-align: center;"><button type="submit" style="background-color:white;" name="blower_prog_button_pressed"> <img src="/static/blower_prog_button.png" alt="FAN" align="bottom" border="{{ blower_prog_button_border }}" height={{ blower_prog_img_size }} width={{ blower_prog_img_size }}></button></td>
+            </tr>
+           </tbody>
+        </table>
+        </td>
+ </div></FORM>
+       <td style="vertical-align: top; width: 250px;">
+        <table style="text-align: left; width: 72px; height: 72px; margin-left: 0px; margin-right: 0px;" border="0" cellpadding="2" cellspacing="2" bgcolor="#e8e8e8">
+           <tbody>
+            <tr>
+              <td style="vertical-align: center;text-align: center;"><a href="/launch_program_editor.html" target="_parent"><button type="submit" style="background-color:white;" name="prog_edit_button_pressed" formtarget="_parent" > <img src="/static/prog_edit_button.png" alt="submit" align="bottom" border="0" height={{ prog_edit_img_size }} width={{ prog_edit_img_size }}> </button></a><br>
+              <a href="/launch_debug.html" target="_parent"><button type="submit" style="background-color:white;" name="debug_button_pressed" formtarget="_parent" > <img src="/static/debug_button.png" alt="submit" align="bottom" border="0" height={{ debug_img_size }} width={{ debug_img_size }}> </button></a></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+</body></html>
