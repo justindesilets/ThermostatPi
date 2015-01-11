@@ -941,6 +941,6 @@ if __name__ == "__main__":
    RPIO.wait_for_interrupts(threaded=True) # Thread that monitors for the TCP/IP port interrupt
    print(" ")
    print("  Setup completed, Launching Web server now...")
-   app.run(host='192.168.0.20', port=8888, debug=False)  # Here, the Flask web server is launched
+   app.run(host='0.0.0.0', port=80, debug=False)  # Here, the Flask web server is launched
 
 # End of python script
