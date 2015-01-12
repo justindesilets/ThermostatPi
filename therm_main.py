@@ -150,7 +150,7 @@ def main_page():
    templateData = {
       'title' : 'RasTherm',
       }
-   return render_template('RasTherm.html', **templateData)
+   return render_template('index.html', **templateData)
 
 # The real thermostat page, a pop up window.
 @app.route("/popup_main.html")
