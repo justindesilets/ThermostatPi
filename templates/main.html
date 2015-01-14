@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block title %}Main{% endblock %}
+{% block header %}<h3>Thermostat</h3>{% endblock %}
+{% block content %}
+<div data-role="content">
+	<div style="text-align:center;">
+		<span style="font-family:'Poiret One',cursive;font-size:128px;">{{current_temperature}}˚</span><br/>
+		<span>Current Temperature</span>
+	</div>
+	<ul data-role="listview" data-divider-theme="b" data-inset="true" data-split-theme="b">
+		<li data-theme="c"><a href="override" data-transition="slide" id="override">Manual Override</a>
+		</li>
+	</ul>
+</div>
+
+{% endblock %}
