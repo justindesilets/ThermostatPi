@@ -2,15 +2,20 @@
 /* CSS Document */
 @font-face {
     font-family: 'tr2n'; /*a name to be used later*/
-    src: url(../static/font/tr2n/Tr2n.ttf) /*URL to font*/
+    src: url(../../static/font/tr2n/Tr2n.ttf) /*URL to font*/
 }
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
 
 #main {
 }
 
+#footer{
+}
+
 #wrap {
 	max-height:100%;
-	min-width:1000px;
+	min-height:320px;
+	min-width:640px;
 	max-width:100%;
 	margin:0 auto;
 	font-family:"tr2n", Verdana, sans-serif;
