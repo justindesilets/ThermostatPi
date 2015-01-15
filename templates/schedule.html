@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+{% block title%}Schedule{% endblock %}
+{% block header %}
+	<div data-theme="a" data-role="header"> <a data-role="button" data-direction="reverse" data-rel="back" href="#page1" data-icon="back" data-iconpos="left" class="ui-btn-left">Back</a>
+		<h3>Schedule</h3>
+	</div>
+{% endblock %}
+{% block content %}
+<form>
+	<fieldset data-role="collapsibleset" data-theme="a" data-content-theme="a">
+		<div data-role="collapsible">
+			<h3>Monday</h3>
+			<label for="time-1-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="time-1-1" id="time-1-1" value="" type="time">
+			<label for="temp-1-1">Temp:</label>
+			<input name="temp-1-1" id="temp-1-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="time-1-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-btn="false" name="time-1-2" id="time-1-2" value="" type="time">
+			<label for="temp-1-2">Temp:</label>
+			<input name="temp-1-2" id="temp-1-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="time-1-3"><span title="Set the time of day when you will return home">Return:</span></label>
+			<input data-clear-btn="false" name="time-1-3" id="time-1-3" value="" type="time">
+			<label for="temp-1-3">Temp:</label>
+			<input name="temp-1-3" id="temp-1-3" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="time-1-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="time-1-4" id="time-1-4" value="" type="time">
+			<label for="temp-1-4">Temp:</label>
+			<input name="temp-1-4" id="temp-1-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+	</fieldset>
+</form>
+{% endblock %}

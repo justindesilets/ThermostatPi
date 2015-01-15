@@ -10,5 +10,7 @@
 	<form>
 		<label style="text-align:center;" for="override">Set Temperature:</label>
 		<input name="override" id="override" data-highlight="true" min="50" max="100" value="70" type="range">
+		<label for="override-hold"><span title="Set to on to hold your override value indefinitely">Hold:</span></label>
+		<input data-role="flipswitch" name="override-hold" id="override-hold" type="checkbox">
 	</form>
 {% endblock %}
