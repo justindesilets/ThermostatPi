@@ -8,8 +8,12 @@
 		{{ current_location }}<br/>
 		{{ outside_temp }}˚
 	</div>
+	<div style="float:right;font-size:small;margin-top:30px;text-align:center;">
+		<b>Set Temperature</b><br/>
+		{{ set_temp }}˚
+	</div>
 	<div style="text-align:center;">
-		<span style="font-family:'Poiret One',cursive;font-size:128px;">{{current_temperature}}˚</span><br/>
+		<span style="font-family:'Poiret One',cursive;font-size:128px;margin-left:60px;">{{current_temperature}}˚</span><br/>
 		<span>Current Temperature</span>
 	</div>
 	<div style="text-align:center;">
@@ -26,7 +30,8 @@
 		</form>
 	</div>
 	<ul data-role="listview" data-divider-theme="b" data-inset="true" data-split-theme="b">
-		<li data-theme="c"><a href="schedule" data-transition="slide" id="schedule">Schedule</a></li>
+		<li data-theme="c"><a href="heat_schedule" data-transition="slide" id="head_schedule">Heat Schedule</a></li>
+		<li data-theme="c"><a href="cool_schedule" data-transition="slide" id="cool_schedule">Cool Schedule</a></li>
 		<li data-theme="c"><a href="override" data-transition="slide" id="override">Manual Override</a></li>
 	</ul>
 </div>

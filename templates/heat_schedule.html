@@ -1,0 +1,148 @@
+{% extends "template.html" %}
+{% block title%}Heat Schedule{% endblock %}
+{% block header %}
+<div data-theme="a" data-role="header">
+	<a data-role="button" data-direction="reverse" data-rel="back" href="#page1" data-icon="back" data-iconpos="left" class="ui-btn-left">Back</a>
+	<h3>Heat Schedule</h3>
+	<a data-role="button" href="javascript:settingsSubmitForm();" data-icon="check" data-iconpos="left" class="ui-btn-right">OK</a>
+	</div>
+{% endblock %}
+{% block content %}
+<form name="heat_schedule" actioni="./heat_schedule.html" method="POST">
+	<fieldset onchange="this.form.submit()" data-role="collapsibleset" data-theme="a" data-content-theme="a">
+		<div data-role="collapsible">
+			<h3>Sunday</h3>
+			<label for="heattime-1-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-1-1" id="heattime-1-1" value="" type="heattime">
+			<label for="heattemp-1-1">Temp:</label>
+			<input name="heattemp-1-1" id="heattemp-1-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-1-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-1-2" id="heattime-1-2" value="" type="heattime">
+			<label for="heattemp-1-2">Temp:</label>
+			<input name="heattemp-1-2" id="heattemp-1-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-1-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-1-3" id="heattime-1-3" value="" type="heattime">
+			<label for="heattemp-1-3">Temp:</label>
+			<input name="heattemp-1-3" id="heattemp-1-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-1-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-1-4" id="heattime-1-4" value="" type="heattime">
+			<label for="heattemp-1-4">Temp:</label>
+			<input name="heattemp-1-4" id="heattemp-1-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Monday</h3>
+			<label for="heattime-2-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-2-1" id="heattime-2-1" value="" type="heattime">
+			<label for="heattemp-2-1">Temp:</label>
+			<input name="heattemp-2-1" id="heattemp-2-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-2-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-btn="false" name="heattime-2-2" id="heattime-2-2" value="" type="heattime">
+			<label for="heattemp-2-2">Temp:</label>
+			<input name="heattemp-2-2" id="heattemp-2-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-2-3"><span title="Set the time of day when you will return home">Return:</span></label>
+			<input data-clear-btn="false" name="heattime-2-3" id="heattime-2-3" value="" type="heattime">
+			<label for="heattemp-2-3">Temp:</label>
+			<input name="heattemp-2-3" id="heattemp-2-3" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-2-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-2-4" id="heattime-2-4" value="" type="heattime">
+			<label for="heattemp-2-4">Temp:</label>
+			<input name="heattemp-2-4" id="heattemp-2-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Tuesday</h3>
+			<label for="heattime-3-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-3-1" id="heattime-3-1" value="" type="heattime">
+			<label for="heattemp-3-1">Temp:</label>
+			<input name="heattemp-3-1" id="heattemp-3-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-3-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-3-2" id="heattime-3-2" value="" type="heattime">
+			<label for="heattemp-3-2">Temp:</label>
+			<input name="heattemp-3-2" id="heattemp-3-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-3-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-3-3" id="heattime-3-3" value="" type="heattime">
+			<label for="heattemp-3-3">Temp:</label>
+			<input name="heattemp-3-3" id="heattemp-3-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-3-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-3-4" id="heattime-3-4" value="" type="heattime">
+			<label for="heattemp-3-4">Temp:</label>
+			<input name="heattemp-3-4" id="heattemp-3-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Wednesday</h3>
+			<label for="heattime-4-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-4-1" id="heattime-4-1" value="" type="heattime">
+			<label for="heattemp-4-1">Temp:</label>
+			<input name="heattemp-4-1" id="heattemp-4-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-4-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-4-2" id="heattime-4-2" value="" type="heattime">
+			<label for="heattemp-4-2">Temp:</label>
+			<input name="heattemp-4-2" id="heattemp-4-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-4-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-4-3" id="heattime-4-3" value="" type="heattime">
+			<label for="heattemp-4-3">Temp:</label>
+			<input name="heattemp-4-3" id="heattemp-4-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-4-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-4-4" id="heattime-4-4" value="" type="heattime">
+			<label for="heattemp-4-4">Temp:</label>
+			<input name="heattemp-4-4" id="heattemp-4-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Thursday</h3>
+			<label for="heattime-5-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-5-1" id="heattime-5-1" value="" type="heattime">
+			<label for="heattemp-5-1">Temp:</label>
+			<input name="heattemp-5-1" id="heattemp-5-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-5-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-5-2" id="heattime-5-2" value="" type="heattime">
+			<label for="heattemp-5-2">Temp:</label>
+			<input name="heattemp-5-2" id="heattemp-5-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-5-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-5-3" id="heattime-5-3" value="" type="heattime">
+			<label for="heattemp-5-3">Temp:</label>
+			<input name="heattemp-5-3" id="heattemp-5-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-5-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-5-4" id="heattime-5-4" value="" type="heattime">
+			<label for="heattemp-5-4">Temp:</label>
+			<input name="heattemp-5-4" id="heattemp-5-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Friday</h3>
+			<label for="heattime-6-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-6-1" id="heattime-6-1" value="" type="heattime">
+			<label for="heattemp-6-1">Temp:</label>
+			<input name="heattemp-6-1" id="heattemp-6-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-6-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-6-2" id="heattime-6-2" value="" type="heattime">
+			<label for="heattemp-6-2">Temp:</label>
+			<input name="heattemp-6-2" id="heattemp-6-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-6-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-6-3" id="heattime-6-3" value="" type="heattime">
+			<label for="heattemp-6-3">Temp:</label>
+			<input name="heattemp-6-3" id="heattemp-6-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-6-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-6-4" id="heattime-6-4" value="" type="heattime">
+			<label for="heattemp-6-4">Temp:</label>
+			<input name="heattemp-6-4" id="heattemp-6-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+		<div data-role="collapsible">
+			<h3>Saturday</h3>
+			<label for="heattime-7-1"><span title="Set the time of day when you wake up">Wake:</span></label>
+			<input data-clear-btn="false" name="heattime-7-1" id="heattime-7-1" value="" type="heattime">
+			<label for="heattemp-7-1">Temp:</label>
+			<input name="heattemp-7-1" id="heattemp-7-1" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-7-2"><span title="Set the time of day when you leave your home">Leave:</span></label>
+			<input data-clear-brn="false" name="heattime-7-2" id="heattime-7-2" value="" type="heattime">
+			<label for="heattemp-7-2">Temp:</label>
+			<input name="heattemp-7-2" id="heattemp-7-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-7-3"><span title="Set the time of day whe you will return home">Return:</span></label>
+			<input data-clear-brn="false" name="heattime-7-3" id="heattime-7-3" value="" type="heattime">
+			<label for="heattemp-7-3">Temp:</label>
+			<input name="heattemp-7-3" id="heattemp-7-2" data-highlight="true" min="50" max="100" value="70" type="range">
+			<label for="heattime-7-4"><span title="Set the time of day when you will go to sleep">Sleep:</span></label>
+			<input data-clear-btn="false" name="heattime-7-4" id="heattime-7-4" value="" type="heattime">
+			<label for="heattemp-7-4">Temp:</label>
+			<input name="heattemp-7-4" id="heattemp-7-4" data-highlight="true" min="50" max="100" value="70" type="range">
+		</div>
+	</fieldset>
+</form>
+{% endblock %}
