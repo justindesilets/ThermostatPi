@@ -4,4 +4,4 @@ Esentially this will be a fork of the work done by Bertrand Zauhar http://ve2zaz
 
 Current State
 =============
-None of the software shown right at the moment is modified. I will update this notation as soon as I get all the hardware and can start experimenting on the build. So for now I would look to Bert's website for the best guidance.
+At first I was going to try and just work the UI and keep it looking like a traditional thermostat setup. I've changed my mind and am now working on making it into more of a mobile UI friendly design. The UI design is moving pretty well but I already knew how to do a lot of that coding. I'm starting to run up against the python bits and it is going to require me to keep learning new bits of python to keep putting these pieces together. So far it has been fun and interesting.
