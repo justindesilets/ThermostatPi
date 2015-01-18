@@ -150,7 +150,7 @@ def main_page():
    templateData = {
       'title' : 'RasTherm',
       }
-   return render_template('RasTherm.html', **templateData)
+   return render_template('index.html', **templateData)
 
 # The real thermostat page, a pop up window.
 @app.route("/popup_main.html")
@@ -941,6 +941,6 @@ if __name__ == "__main__":
    RPIO.wait_for_interrupts(threaded=True) # Thread that monitors for the TCP/IP port interrupt
    print(" ")
    print("  Setup completed, Launching Web server now...")
-   app.run(host='0.0.0.0', port=80, debug=False)  # Here, the Flask web server is launched
+   app.run(host='0.0.0.0', port=80, debug=True)  # Here, the Flask web server is launched
 
 # End of python script

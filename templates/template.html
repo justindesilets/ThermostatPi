@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		{% block head %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}{% endblock %} - ThermostatPi</title>
+		<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='css/ThermostatPi.min.css') }}" />
+		<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='css/jquery.mobile.icons.min.css') }}" />
+		<link rel="stylesheet" type=text/css href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		{% endblock %}
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header">
+				{% block header %}{% endblock %}
+			</div>
+			<div class="ui-content" role="main">
+				{% block content %}{% endblock %}
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Footer</h4>
+			</div>
+		</div>
+	</body>
+</html>

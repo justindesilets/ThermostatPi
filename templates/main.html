@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block title %}Main{% endblock %}
+{% block header %}<h3>Thermostat</h3>{% endblock %}
+{% block content %}
+<div data-role="content">
+	<div style="float:left;font-size:small;margin-top:30px;">
+		<b>Weather</b><br/>
+		{{ current_location }}<br/>
+		{{ outside_temp }}˚
+	</div>
+	<div style="float:right;font-size:small;margin-top:30px;text-align:center;">
+		<b>Set Temperature</b><br/>
+		{{ set_temp }}˚
+	</div>
+	<div style="text-align:center;">
+		<span style="font-family:'Poiret One',cursive;font-size:128px;margin-left:60px;">{{current_temperature}}˚</span><br/>
+		<span>Current Temperature</span>
+	</div>
+	<div style="text-align:center;">
+		<form>
+			<fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+				<legend><h3>Current Operation</h3></legend>
+				<input name="radio-choice-t-6" id="radio-choice-t-6a" value="on" checked="checked" type="radio">
+				<label for="radio-choice-t-6a">Heat</label>
+				<input name="radio-choice-t-6" id="radio-choice-t-6b" value="off" type="radio">
+				<label for="radio-choice-t-6b">Off</label>
+				<input name="radio-choice-t-6" id="radio-choice-t-6c" value="other" type="radio">
+				<label for="radio-choice-t-6c">A/C</label>
+			</fieldset>
+		</form>
+	</div>
+	<ul data-role="listview" data-divider-theme="b" data-inset="true" data-split-theme="b">
+		<li data-theme="c"><a href="heat_schedule" data-transition="slide" id="head_schedule">Heat Schedule</a></li>
+		<li data-theme="c"><a href="cool_schedule" data-transition="slide" id="cool_schedule">Cool Schedule</a></li>
+		<li data-theme="c"><a href="override" data-transition="slide" id="override">Manual Override</a></li>
+	</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block title %}Override{% endblock %}
+{% block header %}
+	<div data-theme="a" data-role="header"> <a data-role="button" data-direction="reverse" data-rel="back" href="#page1" data-icon="back" data-iconpos="left" class="ui-btn-left">Back</a>
+		<h3>Override</h3>
+	</div>
+{% endblock %}
+{% block content %}
+<p style="text-align:center;">Use the slider to override the current scheduled temperature</p>
+	<form>
+		<label style="text-align:center;" for="override">Set Temperature:</label>
+		<input name="override" id="override" data-highlight="true" min="50" max="100" value="70" type="range">
+		<label for="override-hold"><span title="Set to on to hold your override value indefinitely">Hold:</span></label>
+		<input data-role="flipswitch" name="override-hold" id="override-hold" type="checkbox">
+	</form>
+{% endblock %}

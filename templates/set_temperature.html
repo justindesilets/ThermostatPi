@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>"current_temperature"</title>
-</head>
+<h3>Set Temperature</h3>
 <form name="submit" action="./set_temperature.html" method="POST">
 <div align="center">
-<select name="set_temp_dropdown" size=1 onchange="this.form.submit()" style="height: 40px; text-align: center; background-color:white; font-size:20pt;">
+<font face="monospace">
+<select name="set_temp_dropdown" size=1 onchange="this.form.submit()" style="height: 40px; text-align: center; background-color:#666666; color:#9FFFFD; font-size:20pt;>">
 <option value="15.0" {{ s1selected }}>15.0 °</option>
 <option value="15.5" {{ s2selected }}>15.5 °</option>
 <option value="16.0" {{ s3selected }}>16.0 °</option>
@@ -35,7 +34,6 @@
 <option value="29.0" {{ s29selected }}>29.0 °</option>
 <option value="29.5" {{ s30selected }}>29.5 °</option>
 </select>
+</font>
 </div>
 </form>
-</body>
-</html>

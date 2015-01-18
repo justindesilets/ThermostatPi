@@ -1,0 +1,5 @@
+<h1>Current Temperature</h1>
+<div style="text-align: center;"><font size="+4">{{current_temperature}}<sup><small><small>°C</small></small></sup></font>
+<br>
+<font size="+1">Humidity: {{current_humidity}}<sup><small> %</small></sup></font>
+<br>Exterior: {{ ec_current_cond }}</div>
