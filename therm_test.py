@@ -64,7 +64,10 @@ def main_page():
 		'current_temperature' : current_temp,
 		'current_location' : location,
 		'outside_temp' : temp_f,
-		'set_temp' : set_temp
+		'set_temp' : set_temp,
+		'wu_api_key' : wu_api_key,
+		'wu_state' : wu_state,
+		'wu_city' : wu_city,
 	}
 	return render_template('main.html', **templateData)
 @app.route("/override")

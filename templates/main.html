@@ -8,6 +8,49 @@
 		{{ current_location }}<br/>
 		{{ outside_temp }}˚
 	</div>
+	<div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$.ajax({
+					url : "http://api.wunderground.com/api/{{ wu_api_key }}/geolookup/conditions/q/{{ wu_state }}/{{ wu_city }}.json",
+					dataType : "jsonp",
+					success : function(parsed_json) {
+						var location = parsed_json['location']['city'];
+						var temp_f = parsed_json['current_observation']['temp_f'];
+						alert("Current temperature in " + location + " is: " + temp_f);
+					}
+				});
+			});
+			function render(result) {
+				$("h2").text(result.location.city);
+				var forecast = result.forecast.simpleforecast.forecastday;
+				renderWeather(forecast);
+				
+				$("progress.win-ring").hide();
+				$(".content").fadeIn("fast");
+			}
+			
+			function renderWeather(forecast) {
+				var condition = forecast[0];
+				var conditionElement = $(".condition");
+				var imageSrc = "/images/icons/" + condition.icon + ".svg";
+				conditionElement.find("img").attr("src", imageSrc);
+				conditionElement.find(".high span").text(condition.high.celsius);
+				conditionElement.find(".low span").text(condition.low.celsius);
+				conditionElement.find(".text").text(condition.conditions.toLowerCase());
+				conditionElement.find(".wind span").text(condition.avewind.kph);
+
+				var todayIndex = 0;
+				$.each(forecast, function (index, item) {
+					if (index === todayIndex) return;
+
+					renderForecast($(".day-" + index), item);
+				});
+			}
+
+		</script>
+	</div>
 	<div style="float:right;font-size:small;margin-top:30px;text-align:center;">
 		<b>Set Temperature</b><br/>
 		{{ set_temp }}˚
