@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 from flask import Flask, render_template, request, Response
 from functools import wraps
 from apscheduler.schedulers.blocking import BlockingScheduler
